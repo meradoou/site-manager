@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    ServerName VHOST_DOMAIN
+
+    ErrorLog "/srv/http/vhosts/VHOST_DOMAIN/logs/errors.log"
+    CustomLog "/srv/http/vhosts/VHOST_DOMAIN/logs/access.log" common
+
+    DocumentRoot "/srv/http/vhosts/VHOST_DOMAIN/httpdocs"
+    <Directory "/srv/http/vhosts/VHOST_DOMAIN/httpdocs">
+        Require all granted
+    </Directory>
+</VirtualHost>
